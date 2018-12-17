@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>건강하개냥</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gugi|K2D|Noto+Sans+KR|Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+  <!-- <link type="text/css" rel="stylesheet" href="css/a.css"/> -->
+</head>
+
+<body>
+  <header>
+    <nav class="navbar-set">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo logo blue-grey-text text-lighten-5"><i class="pet-title material-icons">pets</i>건강하개냥</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="hospitalSearch.html" class="blue-grey-text text-lighten-5">동물병원찾기</a></li>
+          <li><a href="community.html" class="blue-grey-text text-lighten-5">커뮤니티</a></li>
+          <li><a href="myPage.html" class="blue-grey-text text-lighten-5">나의 정보</a></li>
+          <li><a href="loginForm.html" class="blue-grey-text text-lighten-5">로그인</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <div class="input-field hospital-search">
+            <input id="input_text" type="text" data-length="10"><i class="material-icons prefix">search</i>
+            <label for="input_text">병원을 검색해주세요.</label>
+          </div>
+        </div>
+      </div>
+      <div class="animal">
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">pets</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">pets</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+      </div>
+      <div class="Review">
+        <!-- <div class="input-field col s6 review">
+          <select>
+            <option value="" disabled selected>정렬순</option>
+            <option value="1">조회순</option>
+            <option value="2">최신순</option>
+            <option value="3">댓글순</option>
+          </select>
+          <label>순서를 선택하세요</label>
+        </div> -->
+        <div class="userReview">
+          <div class="review">
+            <!-- <div class="input-field col s6 review"> -->
+            <select class="browser-default">
+              <option value="" disabled selected>정렬순</option>
+              <option value="1">조회순</option>
+              <option value="2">최신순</option>
+              <option value="3">댓글순</option>
+            </select>
+            <!-- </div> -->
+          </div>
+          <div calss="newWrite">
+            <a class="waves-effect waves-light btn write" href="createRev.html"><i class="material-icons left writer">create</i>글쓰기</a>
+          </div>
+          <div class="col">
+
+          </div>
+          <table class="highlight table-script">
+            <thead>
+              <tr>
+                <th>조회수</th>
+                <th>제목</th>
+                <th>닉네임</th>
+                <th>게시일</th>
+                <!-- <th class="center"><i class="material-icons grey-text small">delete_forever</i></th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="center">윤선경입니다.</td>
+                <td> YOON </td>
+                <td>2018-11-12</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <div class = "paging">
+          <ul class="pagination">
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        M.AutoInit();
+      </script>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-copyright">
+      <div class="center footer-color">
+        <h7 class="blue-grey-text text-lighten-5">© 2018 swim-pyo All rights reserved.</h7>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

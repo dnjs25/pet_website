@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>건강하개냥</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gugi|K2D|Noto+Sans+KR|Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+</head>
+  <body>
+    <header>
+      <nav class="navbar-set">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo logo blue-grey-text text-lighten-5"><i class="pet-title material-icons">pets</i>건강하개냥</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="hospitalSearch.html" class="blue-grey-text text-lighten-5">동물병원찾기</a></li>
+            <li><a href="community.html" class="blue-grey-text text-lighten-5">커뮤니티</a></li>
+            <li><a href="myPage.html" class="blue-grey-text text-lighten-5">나의 정보</a></li>
+            <li><a href="loginForm.html" class="blue-grey-text text-lighten-5">로그인</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="joinform-intro">
+          <h5 class="grey-text text-darken-3">회원가입</h5><p class="grey-text text-darken-2">정보를 입력하세요. *표시는 필수항목입니다.</p>
+        </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="아이디를 입력하세요. 5자이상 10자이하만 가능합니다." id="id" type="text" class="validate" data-length="10">
+                <label for="id">*아이디</label>
+              </div>
+              <div class="col s2">
+                <a href="#" class="waves-effect waves-light btn grey darken-2 join-confirm">중복확인</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6" data-length="2,13">
+                <input placeholder="비밀번호를 입력하세요. 8자이상 13자리 이하만 가능합니다." id="password" type="text" class="validate" data-length="13">
+                <label for="password">*비밀번호</label>
+              </div>
+              <div class="input-field col s6" data-length="2,13">
+                <input placeholder="비밀번호를 다시 입력해주세요." id="re-password" type="text" class="validate" data-length="13">
+                <label for="password">*비밀번호 확인</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="이름을 입력하세요." id="name" type="text" class="validate">
+                <label for="name">*이름</label>
+              </div>
+              <div class="input-field col s6">
+                <select class="join-sex">
+                  <option value="" disabled selected>선택</option>
+                  <option value="1" class="join-sex">남자</option>
+                  <option value="2" class="join-sex">여자</option>
+                </select>
+                <label>*성별</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="생일을 입력하세요." id="input_text" type="text" class="validate">
+                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                <label for="input_text">*생년월일</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="닉네임을 입력하세요. 2자이상 가능합니다." id="nickname" type="text" class="validate">
+                <label for="닉네임">*닉네임</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <div class="input-field">
+                  <input placeholder="이메일 주소를 입력하세요. ex)swimpyo@swimpyo.com" id="email_inline" type="email" class="validate">
+                  <label for="email_inline">*Email</label>
+                  <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="center">
+        <a href="#" class="waves-effect waves-light btn joinForm-btn">취소</a>
+        <a href="joinSuccess.html" class="waves-effect waves-light btn joinForm-btn">회원가입</a>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-copyright">
+        <div class="center footer-color">
+          <h7 class="blue-grey-text text-lighten-5">© 2018 swim-pyo All rights reserved.</h7>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script type="text/javascript">
+    // 아이디 중복확인
+    function checkValue() {
+      // 아무것도 없을 때
+      // 아이디가 중복일 때
+      // 사용가능할 때
+    }
+  </script>
+  <script type="text/javascript">
+    M.AutoInit();
+  </script>
+</html>

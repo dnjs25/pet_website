@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>건강하개냥</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gugi|K2D|Noto+Sans+KR|Slabo+27px">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/master.css">
+  <!-- ~ css -->
+  <!-- javascript -->
+  <script src="js/weatherAPI.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOURAPPKEY&callback=initMap"
+type="text/javascript"></script>
+  <!-- ~ javascript -->
+</head>
+<body>
+  <header>
+    <nav class="navbar-set">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo logo blue-grey-text text-lighten-5"><i class="pet-title material-icons">pets</i>건강하개냥</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="hospitalSearch.html" class="blue-grey-text text-lighten-5">동물병원찾기</a></li>
+          <li><a href="community.html" class="blue-grey-text text-lighten-5">커뮤니티</a></li>
+          <li><a href="myPage.html" class="blue-grey-text text-lighten-5">나의 정보</a></li>
+          <li><a href="loginForm.html" class="blue-grey-text text-lighten-5">로그인</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="center index-search">
+          <div class="input-field cafe-search">
+            <input id="input_text" type="text" data-length="10"><i class="material-icons prefix">search</i>
+            <label for="input_text"><i class="material-icons tiny">pets</i> 동물병원을 검색해주세요.</label>
+          </div>
+        </div>
+      </div>
+      <div class="weather" onclick="getLocation();">
+        <h5><i class="material-icons blue-text">wb_sunny</i> 오늘의 날씨</h5>
+        <div class="row center w-list">
+          <div class="col s3 w-drawing" id="drawing">
+          </div>
+          <div class="col s3 w-temperature">
+          </div>
+          <div class="col s3 w-finedust" id="finedust">
+          </div>
+        </div>
+      </div>
+      <div class="pet-community">
+        <h5><i class="material-icons blue-text">textsms</i> 커뮤니티 최신글</h5>
+        <table class="highlight">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Contents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>글쓴이</td>
+              <td>제목</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>글쓴이</td>
+              <td>제목</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>글쓴이</td>
+              <td>제목</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>글쓴이</td>
+              <td>제목</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>글쓴이</td>
+              <td>제목</td>
+              <td>내용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-copyright">
+      <div class="center footer-color">
+        <h7 class="blue-grey-text text-lighten-5">© 2018 swim-pyo All rights reserved.</h7>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+      M.AutoInit();
+  </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* .input-field .prefix ~ label {
+margin-left: 0;
+}
+  .icon-pos{
+    color :rgb(246, 68, 68);
+    font-size: 50px
+  }
+
+  hr{
+    width: 500px;
+    text-align: center;
+  }
+  .index.col.s6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+.row .col.s5{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    float: none;
+    left: auto;
+    right: auto;
+} */
+/* .row .col {
+    float: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 .75rem;
+    min-height: 1px;
+} */
+/* .row{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  html {
+    font-family: 'Hanna', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  } */
+/*여기까지가 index.html css*/
+
+
+/* .container {
+  margin-top: 3rem;
+} */
+  /* html {
+  font-family: 'Noto Sans KR', sans-serif;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  footer{
+    background-color: #c8c9cB;
+    text-align: center;
+    margin-top: auto;
+    height: 50px;
+  }
+  p{
+    color: white;
+  } */
+  /* .id, .pw {
+  width: 33.3333333333%;
+  margin-left: auto;
+  margin: auto;
+  left: auto;
+  right: auto;
+  float: none;
+}
+  .row .col.s4 {
+  width: 33.3333333333%;
+  margin-left: auto;
+  margin: auto;
+  left: auto;
+  right: auto;
+  float: none;
+}
+
+  .container{
+    text-align: center;
+  }
+  .login-icon, .pw-icon{
+    color : rgb(216, 159, 228);
+  }
+  .nav-wrapper{
+    background-color: #c8c9cB;
+  }
+  .login-btn{
+    background-color: #c8c9cB;
+  }
+
+  .login-btn:hover{
+    background-color: #c8c9cB;
+  } */
+
+  /*여기까지가 login.html의 css*/
+
+
+    /* .col s6 m4{
+      margin-left: auto;
+      margin-right: auto;
+      float: left;
+    } */
+
+    /* .card{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      left: auto;
+      right: auto;
+      float: left;
+    }
+     .search {
+      margin-left: auto;
+      margin-right: auto;
+      left: auto;
+      right: auto;
+    }
+
+    .row .col {
+    box-sizing: border-box;
+    padding: 0 .75rem;
+    min-height: 1px;
+}
+    .row1{
+      width: auto;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .col s6{
+      margin: auto;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    footer{
+      background-color: #c8c9cB;
+      text-align: center;
+      margin-top: auto;
+      height: 50px;
+    }
+    .nav-wrapper{
+      background-color: #c8c9cB;
+    }
+    .link{
+      padding-top: 1rem;
+    }
+    .index {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    margin-right: auto;
+} */

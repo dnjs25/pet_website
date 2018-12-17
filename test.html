@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLpqbTJjSkxCwHHpdxPuGZsSiXQZPZn8&callback=initMap"
+  type="text/javascript"></script>
+  </head>
+  <body>
+    <button type="button" id="button">test</button>
+  </body>
+  <script type="text/javascript">
+
+  function initMap() {
+    // Try HTML5 geolocation.
+    console.log("initMap");
+    if (navigator.geolocation) {
+      console.log("navigator");
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        console.log(pos);
+        geocodeLatLng(pos);
+      });
+    }
+  }
+  function geocodeLatLng(pos) {
+    var input = pos;
+    var geocoder = new google.maps.Geocoder;
+    geocoder.geocode({'location': input}, function(results, status) {
+      if (status === 'OK') {
+        if (results[0]) {
+          cityName = results[0].address_components[2].long_name;
+          console.log(cityName);
+          fine_dust(cityName);
+        } else {
+          window.alert('No results found');
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+    });
+  }
+
+  function fine_dust(cityName) {
+    var gu = cityName;
+    var xhr = new XMLHttpRequest();
+    var url = 'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnMesureSidoLIst'; /*URL*/
+    var queryParams = '?' + encodeURIComponent('ServiceKey') + '='+'K%2BSsijMhxfNqSbmVK3UyvRSCaRnW5IU6pPqEmkGPB9XZZo6HJvoNcJQ7tDxBQT4FG38dK9bmoYISfGumViwSbQ%3D%3D'; /*Service Key*/
+    queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('25'); /*한 페이지 결과 수*/
+    queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /*페이지 번호*/
+    queryParams += '&' + encodeURIComponent('sidoName') + '=' + encodeURIComponent('서울'); /*시도 이름 (서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종)*/
+    queryParams += '&' + encodeURIComponent('searchCondition') + '=' + encodeURIComponent('DAILY'); /*요청 데이터기간 (시간 : HOUR, 하루 : DAILY)*/
+    queryParams += '&' + encodeURIComponent('_returnType') + '=' + encodeURIComponent('json'); /*요청 데이터 형식 (json) */
+
+    xhr.open('GET', url + queryParams, true);
+    xhr.onreadystatechange = function () {
+        if (this.readyState == 4) {
+            // console.log(JSON.stringify(this.getAllResponseHeaders())+' Body: '+this.responseText);
+            console.log(this.responseText);
+            var response = JSON.parse(this.responseText);
+            console.log(response);
+            console.log(typeof(response));
+            fineDustOutput(response, gu);
+        }
+    };
+
+    xhr.send();
+
+  }
+
+  function fineDustOutput(response, gu) {
+    var res = response;
+    var cityName = gu;
+    // console.log(res.list[0].cityName);
+    for(var i=0; i<26; i++) {
+      if(res.list[i].cityName === cityName) {
+        var result = res.list[i];
+        // console.log(result);
+        var cityName = result.cityName;
+        var pm10Value = result.pm10Value;
+        var pm25Value = result.pm25Value;
+        console.log(cityName, pm10Value, pm25Value);
+        var changeValue1 = fdValueChange(pm10Value);
+        var changeValue2 = fdValueChange(pm25Value);
+        console.log(cityName, changeValue1, changeValue2);
+        break;
+      }
+    }
+  }
+
+  function fdValueChange(Value) {
+    if (Value === ''){
+      Value = '정보없음';
+    }
+    else if (Value>0 && Value<=30) {
+      Value = '좋음';
+    }
+    else if (Value>=31 && Value<=80) {
+      Value = '보통';
+    }
+    // elif pm25_value>0 and pm25_value<=30:
+    //     pm25_value = '좋음'
+    // elif pm25_value>=31 and pm25_value<=80:
+    //     pm25_value = '보통'
+    // elif pm25_value>=81 and pm25_value<=150:
+    //     pm25_value = '나쁨'
+    // elif pm25_value>=151:
+    //     pm25_value = '매우나쁨'
+
+    return Value;
+  }
+  </script>
+</html>

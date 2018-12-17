@@ -1,0 +1,119 @@
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gugi|K2D|Noto+Sans+KR|Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>카페목록</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar-set">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo logo blue-grey-text text-lighten-5"><i class="pet-title material-icons">pets</i>건강하개냥</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="hospitalSearch.html" class="blue-grey-text text-lighten-5">동물병원찾기</a></li>
+          <li><a href="community.html" class="blue-grey-text text-lighten-5">커뮤니티</a></li>
+          <li><a href="myPage.html" class="blue-grey-text text-lighten-5">나의 정보</a></li>
+          <li><a href="loginForm.html" class="blue-grey-text text-lighten-5">로그인</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="contents">
+        <div class="row">
+          <a class="waves-effect waves-teal btn-flat modal-trigger right" href="#modal1"><i class="material-icons">delete_forever</i></a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>삭제하시겠습니까?</h4>
+              <!-- <p>A bunch of text</p> -->
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">아니오</a>
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">네</a>
+            </div>
+          </div>
+          <div class="contents-title col s12">
+            <h5 class="left">제목입니다.</h5>
+            <span class="right date">작성일: 2018-11-06</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contents-writer col">
+            <img src="img/user.png" alt="" class="circle img-user">
+          </div>
+          <div class="col nick">
+            <h6 class="nickname">예원</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contents-read col s12">
+            <p>안녕하세요!<br>동물병원 추천 받고 싶어요. 댓글 남겨주세요ㅎㅎ</p>
+          </div>
+        </div>
+        <div class="center">
+          <a href="userRev.html" class="waves-effect waves-light btn contents-btn">목록</a>
+          <a href="contents_mod.html" class="waves-effect waves-light btn contents-btn">수정</a>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="comment-title col s12">
+          <h5 class=""><i class="material-icons small color-br">comment</i>댓글</h5>
+        </div>
+        <div class="cmt-write row">
+          <div class="input-field col s9">
+            <input placeholder="댓글을 등록하세요." id="comment" type="text" class="validate">
+            <!-- <label for="first_name">댓글</label> -->
+          </div>
+          <div class="col s3">
+            <a href="userRev.html" class="waves-effect waves-light btn comment-btn">등록</a>
+          </div>
+        </div>
+        <table class="highlight">
+          <thead>
+            <tr>
+              <th>닉네임</th>
+              <th>내용</th>
+              <th class="center"><i class="material-icons grey-text small">delete_forever</i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>선경</td>
+              <td>역촌동에 24시 동물병원이 있습니다.</td>
+              <td class="center"><U>삭제</U></td>
+            </tr>
+            <tr>
+              <td>ueidl</td>
+              <td>댓글입니다.</td>
+              <td class="center"><U>삭제</U></td>
+            </tr>
+            <tr>
+              <td>예원</td>
+              <td>다니던 병원이 있나요?</td>
+              <td class="center"><U>삭제</U></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-copyright">
+      <div class="center footer-color">
+        <h7 class="blue-grey-text text-lighten-5">© 2018 swim-pyo All rights reserved.</h7>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+  M.AutoInit();
+</script>
+</html>
